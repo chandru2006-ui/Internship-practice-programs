@@ -4,22 +4,23 @@
             body
             {
                 display: flex;
-                justify-content: center;
                 align-items: center;
+                justify-content: center;
                 flex-direction: column;
                 background-image: url("insta2.jpg");
+                height: 100vh;
             }
          .container
          {
             width: 100%;
             max-width: 350px;
             border-radius: 10px;
+           
             box-sizing: border-box;
             margin:0px;
             padding: 20px;
             font-family: Georgia, 'Times New Roman', Times, serif;
             background-color:#ebeaea;
-            position: relative;
             border: none;
             
             
@@ -104,24 +105,14 @@
          {
             text-decoration: none;
          }
-         .insta-logo img{
-            width: 20%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: 140px;
-            margin-top:0px;
-         }
+         
+         
          
          
         </style>
         <div class="container">
-            <div class="insta-logo">
-            <img src="instagram.png" >
-            </div>
             <h1>Instagram</h1>
            
-
            <form>
             <div class="input-box">
             <div class="icon">
@@ -131,7 +122,7 @@
             </div>
             <p id="error1"></p>
 
-            <br><br>
+            <br>
             <div class="input-box">
             <div class="icon">
             <img src="password.svg" class="image1">
@@ -140,7 +131,7 @@
             </div>
             <p id="error2"></p>
 
-            <br><br>
+            <br>
            <input type="button" value="Log in" onclick="validate()">
            <br><br>
 
@@ -180,10 +171,14 @@
             if(usernamePat.test(username) && passwordPat.test(password))
             {
                 alert("Login Succesfully!");
+                document.getElementById("hname").value = "";
+                document.getElementById("hpas").value = "";
+               
             }
             else
             {
                 alert("Invalid Credential!please Try again");
+               
             }
 
         }
