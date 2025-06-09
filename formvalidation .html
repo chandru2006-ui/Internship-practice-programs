@@ -286,14 +286,24 @@
                 if(i==0 && j==0 && k==0 && l==0 && m==0 && n==0 && p==0 && q==0 && s==0)
                 {
                     alert("Successfully Sned!");
+                    document.getElementById("fid").value="";
+                    document.getElementById("lid").value="";
+                    document.getElementById("eid").value="";
+                    document.getElementById("aid").value="";
+                    document.getElementById("cid").value="";
+                    document.getElementById("pid").value="";
+                    document.getElementById("phoneid").value="";
+                    document.getElementById("stateid").value="";
+                    var hosted=document.getElementsByName("hosting");
+                    for (let i = 0; i < hosted.length; i++) {
+                     hosted[i].checked = false;
+                      }
+                    
                 }
                 else
                 {
                     alert("Invalid Cradentails");
                 }
-                
-               
-
             }
         </script>
     </body>
