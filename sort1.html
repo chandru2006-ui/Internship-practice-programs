@@ -1,0 +1,76 @@
+<html>
+    <body>
+        <div class="container">
+            <h1>Sorting</h1>
+        <form>
+            Input  &nbsp;<input type="text" id="hsort" placeholder="hello" required><br><br>
+            <h3>Result(sorting) </h3>
+            <textarea id="result"></textarea><br><br>
+            <input type="button" value="sort" onclick="strings()"><br><br>
+            <input class="b2" type="button" value="reset" onclick="reset()">
+        </form>
+        </div>
+        <script>
+            function strings()
+            {
+            var input=document.getElementById("hsort").value;
+            var  output=input.split('');
+            var sortlogic=output.sort().join('');
+            document.getElementById("result").value=sortlogic;
+            }
+            function reset()
+            {
+            document.getElementById("hsort").value="";
+            document.getElementById("result").value="";
+            }
+            
+        </script>
+        <style>
+            body
+            {
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: bold;
+                background-color: blue;
+            }
+            .container
+            {
+                border: 2px solid black;
+                padding: 20px;
+                border-radius: 10px;
+                background-color: rgb(188, 221, 221);
+            }
+            input[type="text"],textarea
+            {
+                padding: 10px;
+                text-align: center;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-weight: bold;
+                border: 2px solid black;
+                border-radius: 5px;
+                font-size: medium;
+            }
+            input[type="button"]
+            {
+            padding: 10px;
+            width: 40%;
+            font-weight: bold;
+            background-color:rgb(12, 117, 38);
+            border-radius: 5px;
+            border: none;
+            color: white;
+            margin-left: 60px;
+            }
+            .container h1
+            {
+                text-align: center;
+            }
+            input[value="reset"]
+            {
+            background-color: green;
+            padding: 10px;
+           }
+        </style>
+    </body>
+</html>
